@@ -32,6 +32,16 @@ app.use('/password', passwordStrengthRoutes);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(loggerMiddleware);
+app.get('/', (req, res) =>{
+  res.json({
+    1:"To Check your password stength go to (/password/check-password )",
+    2: "for product go to (/ecommerce/products)",
+    3: "for single product go to (/ecommerce/products/:id)",
+    4: "for login go to (/ecommerce/login)",
+  });
+});
+
+
 
 // Starting the server
 const PORT = 3000;
