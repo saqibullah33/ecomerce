@@ -2,6 +2,8 @@
 
 const express = require('express');
 const router = express.Router();
+const app=express()
+app.use(express.json())
 
 // Simulated Database (In reality, this would connect to a database)
 const products = [
