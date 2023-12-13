@@ -3,6 +3,8 @@
 const express = require('express');
 const router = express.Router();
 const passwordValidator = require('password-validator');
+const app=express()
+app.use(express.json())
 
 // Create a schema for password validation
 const schema = new passwordValidator();
